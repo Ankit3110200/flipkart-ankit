@@ -74,6 +74,7 @@ const dispatch=useDispatch()
           homedata.map((data,index) => {
               return (
                   <Card 
+                  key={index}
                   headerleft={`${data.heading}`}
                   headerright={
                       <MaterialButton
@@ -92,6 +93,7 @@ const dispatch=useDispatch()
                                     {
                                         product.homeproducts.map(product =>
                                         <Link 
+                                        key={product._id}
                                         to={`Samsung/${product.slug}/${product._id}/p`}
                                         style={{display:"block"}}  
                                         className='productcontainer'>

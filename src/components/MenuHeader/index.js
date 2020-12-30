@@ -56,7 +56,7 @@ const MenuHeader = (props) => {
                     {category.categories.length > 0 ? rendercategories(category.categories) : null}
                 </ul>
             </div>
-            <div clasName="mobilemenu">
+            <div className="mobilemenu">
             
                 <div className="menu-toggler2" id="menu-toggler2" onClick={openMenu}>
                

@@ -18,7 +18,7 @@ const CartItem = (props) => {
     }
     return (
         <>
-            <div class="cartItemContainer">
+            <div className="cartItemContainer">
                 <div className="flexRow">
 
                     <div className="cartProImgContainer">
