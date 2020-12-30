@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { generatepublicimgUrl } from '../../../urlConfig';
+import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { getproductbyslug,getproductsofpage, getproductpage } from '../../../actions'
 import "./style.css"
 import getparams from '../../../utils/getparams'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import{ Carousel as c} from 'react-bootstrap'
 import Card from '../../../components/Ui/card'
 import { Link } from 'react-router-dom'
 
@@ -39,7 +40,7 @@ function ProductPage(props) {
                     <div className="bannercontainer" key={index}>
                     <a
                     key={index}
-                    style={{display:"block"}}
+                    // style={{display:"block"}}
                     href={banner.navigateTo}>
                     <img src={banner.img} />
                     </a>
@@ -47,6 +48,7 @@ function ProductPage(props) {
                     )
                 }
             </Carousel>
+          
             <div style={{display:"flex",flexWrap:"wrap",justifyContent:"center" ,margin:"10px 0"}}>
             
                 {/* {

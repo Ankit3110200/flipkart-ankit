@@ -4,12 +4,14 @@ import productReducer from './product.reducer';
 import authreducer from './auth.reducer'
 import cartreducer from './cart.reducer'
 import  userReducer  from './user.reducer';
+import homereducer from './home.reducer'
 const rootreducer=combineReducers({
     category:categoryReducers,
     product:productReducer,
     auth:authreducer,
     cart:cartreducer,
-    user:userReducer
+    user:userReducer,
+    home:homereducer
 })
 
 export default rootreducer

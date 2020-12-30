@@ -1,0 +1,16 @@
+.carousel-ads{
+  
+width: 100%;
+height: 50vh;
+background-color: lavender;
+overflow: visible;
+
+}
+.carousel-ads img{
+
+  
+    max-width: 100% !important;
+    max-height: 50vh;
+   
+    
+}

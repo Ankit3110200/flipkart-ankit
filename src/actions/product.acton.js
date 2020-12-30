@@ -89,3 +89,25 @@ export const getproductdetailbyid=(payload)=>{
         
     }
 }
+
+export const getallproduct=()=>{
+    return async dispatch=>{
+        try{
+            dispatch({type:productconstants.GET_PRODUCTS_REQUEST})
+            const res=await axios.get(`/product/getallproduct`)
+            console.log(res)   
+            dispatch({
+                type:productconstants.GET_PRODUCTS_SUCCESS,
+                payload:{products:res.data.products}
+                })
+        }catch(error){
+            console.log(error)
+            dispatch({
+                type:productconstants.GET_PRODUCTS_FAILURE,
+             payload:{error:error}
+             })
+        }
+        
+        
+    }
+}

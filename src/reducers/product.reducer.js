@@ -13,7 +13,8 @@ const intialstate = {
     page: {},
     error: null,
     productDetails: {},
-    loading: false
+    loading: false,
+    homeproducts:[]
 }
 
 export default (state = intialstate, action) => {
@@ -81,6 +82,26 @@ export default (state = intialstate, action) => {
                 loading: false
             }
             break
+            case productconstants.GET_PRODUCTS_REQUEST:
+                state = {
+                    ...state,
+                    loading: true
+                }
+                break
+            case productconstants.GET_PRODUCTS_SUCCESS:
+                state = {
+                    ...state,
+                    homeproducts: action.payload.products,
+                    loading: false
+                }
+                break
+            case productconstants.GET_PRODUCTS_FAILURE:
+                state = {
+                    ...state,
+                    error: action.payload.error,
+                    loading: false
+                }
+                break
     }
     return state
 }

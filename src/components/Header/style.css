@@ -2,7 +2,7 @@
     width: 100%;
     height: 56px;
     background: #2874f0;
-  
+
 }
 .subHeader{
     max-width: 1100px;
@@ -14,6 +14,7 @@
 }
 
 .logo{
+
     width: 137px;
     height: 100%;
     overflow: hidden;
@@ -137,36 +138,167 @@
   flex-direction: column;
   align-items: center;
 }
-
 .logininputcontainer{
-  width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   padding: 0 30px;
   margin: 40px 0;
 }
-
-@media only screen and (max-width: 600px) {
-
-
-  .logo{
-    margin-left: 10%;
-    display: inline-table;
-    border: 5px solid transparent;
+/* .mobile-header{
+  width: 100%;
+    height: 56px;
+    background: #2874f0;
+    display: flex;
+    align-items: center;
+    
 }
-.searchInputContainer{
+.toggle-menu{
+  margin-left: 10px;
+  background: none;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  z-index: 100;
+  display: none;
+}
+.toggle-menu span{
+ 
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  position: relative;
+
+  z-index: 100;
   
-  margin-top: 15%;
-  margin-left: -45%;
-  width: 350px;
-  }
-.header{
-  height: 112px;
-  overflow-x: hidden;
-  overflow-y:inherit;
-}
-.rightMenu{
-  margin-left: -102%;
-  margin-top: -14%;
 }
 
+.toggle_menu{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: #2874f0;
+  top: 0;
+  left: 0;
+  max-width: 400px;
+  padding: 80px 50px;
+  transition: .3s linear;
+  z-index: 99;
+}
+.toggle_menu ul{
+ list-style: none;
+ display: block;
+ margin-top: 40px;
+}
+.toggle_menu ul li{
+  padding: 5px;
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 1px solid grey;
+}
+.mobile-header button{
+border: none;
+text-decoration: none;
+}
+
+@media (max-width:600px){
+ 
+  .toggle-menu{
+    display: block;
+  }
+} */
+.menu-toggler{
+  background: none;
+  
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  outline: none;
+  z-index: 999;
+  display: none;
+  left: 90%;
+
+}
+.menu-toggler span{
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  position: relative;
+  transition: .3s linear;
+}
+.leftmenu{
+display: contents;
+}
+@media (max-width:980px){
+
+  .menu-toggler{
+    display: block;
+  }
+
+  .leftspace{
+    display: none;
+  }
+  .rightspace{
+    display: block;
+  }
+.logininputcontainer
+{
+  max-width: 40%;
+}
+  .rightMenu{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    background-color: #2874f0;
+    top: 0;
+    right: -100%;
+    max-width: 400px;
+    transition: .3s linear;
+    z-index: 500;
+    width: 100%;
+    padding-bottom: 100vh;
+    padding-top: 10vh;
+  }
+  .menu-toggler.active span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 4px;
+
+  }
+
+  .menu-toggler.active span:nth-child(2){
+    opacity: 0;
+  }
+
+  .menu-toggler.active span:nth-child(3){
+    transform: rotate(45deg);
+    bottom: 14px;
+
+  }
+  .more ,.fullname {
+   
+    margin: 30px 20px;
+    cursor: pointer;
+  }
+  .leftmenu{
+    display: flex;
+    flex-direction: column;
+  }
+  .header{
+    height: 100px;
+  }
+  .searchInputContainer {
+    width: 400px;
+  }
+}
+
+@media (max-width:450px){
+  .searchInputContainer{
+    width: 300px;
+  }
 }

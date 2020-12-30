@@ -61,6 +61,7 @@ const ProductDetailspage=(props)=> {
                 title="ADD TO CART"
                 bgColor="#ff9f00"
                 textColor="#ffffff"
+                className="addtocartbtn"
                 style={{
                   marginRight: '5px'
                 }}

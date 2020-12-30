@@ -7,9 +7,17 @@
     height: 50vh;
     object-fit: contain;
 }
-.productsimg img{
-    width: 100%;
-    max-height: 20vh;
-    object-fit: contain;
+.productsimg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
+    object-fit: cover;
 }
+.productsimg img{
+   width: 18%;
+    object-fit: cover;
+    overflow: hidden;
+    text-align: center;
+}
+
