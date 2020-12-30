@@ -2,7 +2,9 @@
     padding: 10px;
     box-sizing: border-box;
     display: flex;
+  
 }
+
 .orderImgContainer{
     width: 80px;
     height: 80px;
@@ -20,7 +22,7 @@
 .orderName{
     width: 300px;
     box-sizing: border-box;
-    padding: 0 20px;
+    padding: 0 0;
     font-size: 12px;
 }
 .orderPrice{
@@ -29,4 +31,9 @@
     display: flex;
     align-items: flex-start;
     font-size: 14px;
+  }
+  @media(max-width:980px){
+      .orderName{
+          width: 60px;
+      }
   }

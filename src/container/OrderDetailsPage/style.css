@@ -40,7 +40,7 @@
 }
 
 .orderTrack{
-    width: 400px;
+    
     display: flex;
 }
 .orderStatus{
@@ -89,4 +89,8 @@
 
 .orderInfo .date{
     font-size: 10px;
+}
+
+.orderdetailspage{
+    width: 100% !important;
 }
