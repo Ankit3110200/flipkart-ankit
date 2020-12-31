@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './style.css';
 import flipkartLogo from '../../images/logo/flipkart.png';
 import goldenStar from '../../images/logo/golden-star.png';
-import { IoIosArrowDown, IoIosCart, IoIosSearch } from 'react-icons/io';
+import { IoIosArrowDown, IoIosSearch } from 'react-icons/io';
 import {
   Modal,
   MaterialInput,
@@ -12,16 +12,7 @@ import {
 import { useDispatch, useSelector } from "react-redux"
 import { getcartitems, login, signout, signup } from '../../actions';
 import Cart from '../Ui/Cart'
-import { makeStyles } from "@material-ui/core/styles";
-import Popper from "@material-ui/core/Popper";
-import { RiMenuAddLine } from "react-icons/ri";
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    border: "1px solid",
-    padding: theme.spacing(1),
-    backgroundColor: theme.palette.background.paper
-  }
-}));
+
 
 const Header = (props) => {
 
@@ -101,15 +92,15 @@ const Header = (props) => {
     />)
   }
 
-  const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  
+  // const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleClick = (event) => {
-    setAnchorEl(anchorEl ? null : event.currentTarget);
-  };
+  // const handleClick = (event) => {
+  //   setAnchorEl(anchorEl ? null : event.currentTarget);
+  // };
 
-  const open = Boolean(anchorEl);
-  const id = open ? "simple-popper" : undefined;
+  // const open = Boolean(anchorEl);
+  // const id = open ? "simple-popper" : undefined;
   const openMenu = () => {
     const menu = document.getElementById("menu-toggler");
     
